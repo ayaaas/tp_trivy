@@ -1,0 +1,135 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.train.opt
+#1 transferring dockerfile: 685B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 1.5s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 181B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 855B done
+#4 DONE 0.1s
+
+#5 [builder 1/4] FROM docker.io/library/python:3.12-slim@sha256:cb33f7f771ecec2ef1225cf39b159591a040391bd73e4c01f00fdfc4c47611d2
+#5 resolve docker.io/library/python:3.12-slim@sha256:cb33f7f771ecec2ef1225cf39b159591a040391bd73e4c01f00fdfc4c47611d2
+#5 resolve docker.io/library/python:3.12-slim@sha256:cb33f7f771ecec2ef1225cf39b159591a040391bd73e4c01f00fdfc4c47611d2 0.1s done
+#5 DONE 0.5s
+
+#5 [builder 1/4] FROM docker.io/library/python:3.12-slim@sha256:cb33f7f771ecec2ef1225cf39b159591a040391bd73e4c01f00fdfc4c47611d2
+#5 sha256:5c397e4307db7bd392eff1d36de88b04da2a137a4b906b7e0e4657bada560645 249B / 249B 0.2s
+#5 sha256:5c397e4307db7bd392eff1d36de88b04da2a137a4b906b7e0e4657bada560645 249B / 249B 0.2s done
+#5 sha256:b524bb3aba7394d85233f3a0a742b8f1b56179e8f61492f73d42a1ff118623b7 0B / 12.12MB 0.3s
+#5 sha256:be6443c06d3c9914acdca3ffb368adad23d4f282b55e71e730878ad3e3c3f75c 0B / 1.29MB 0.2s
+#5 sha256:f2be67225471500c788ce88c597eb5ea8336e912ad1ca4815650e0281afe2034 0B / 29.84MB 0.2s
+#5 sha256:b524bb3aba7394d85233f3a0a742b8f1b56179e8f61492f73d42a1ff118623b7 3.15MB / 12.12MB 0.5s
+#5 sha256:b524bb3aba7394d85233f3a0a742b8f1b56179e8f61492f73d42a1ff118623b7 4.19MB / 12.12MB 0.8s
+#5 sha256:be6443c06d3c9914acdca3ffb368adad23d4f282b55e71e730878ad3e3c3f75c 1.29MB / 1.29MB 0.9s done
+#5 sha256:b524bb3aba7394d85233f3a0a742b8f1b56179e8f61492f73d42a1ff118623b7 5.24MB / 12.12MB 1.2s
+#5 sha256:b524bb3aba7394d85233f3a0a742b8f1b56179e8f61492f73d42a1ff118623b7 6.29MB / 12.12MB 1.7s
+#5 sha256:f2be67225471500c788ce88c597eb5ea8336e912ad1ca4815650e0281afe2034 2.10MB / 29.84MB 1.7s
+#5 sha256:b524bb3aba7394d85233f3a0a742b8f1b56179e8f61492f73d42a1ff118623b7 7.34MB / 12.12MB 2.0s
+#5 sha256:b524bb3aba7394d85233f3a0a742b8f1b56179e8f61492f73d42a1ff118623b7 8.39MB / 12.12MB 2.4s
+#5 sha256:f2be67225471500c788ce88c597eb5ea8336e912ad1ca4815650e0281afe2034 4.19MB / 29.84MB 2.4s
+#5 sha256:b524bb3aba7394d85233f3a0a742b8f1b56179e8f61492f73d42a1ff118623b7 9.44MB / 12.12MB 2.7s
+#5 sha256:b524bb3aba7394d85233f3a0a742b8f1b56179e8f61492f73d42a1ff118623b7 10.49MB / 12.12MB 3.2s
+#5 sha256:f2be67225471500c788ce88c597eb5ea8336e912ad1ca4815650e0281afe2034 6.29MB / 29.84MB 3.2s
+#5 sha256:b524bb3aba7394d85233f3a0a742b8f1b56179e8f61492f73d42a1ff118623b7 11.53MB / 12.12MB 3.5s
+#5 sha256:b524bb3aba7394d85233f3a0a742b8f1b56179e8f61492f73d42a1ff118623b7 12.12MB / 12.12MB 3.7s done
+#5 sha256:f2be67225471500c788ce88c597eb5ea8336e912ad1ca4815650e0281afe2034 8.39MB / 29.84MB 3.8s
+#5 sha256:f2be67225471500c788ce88c597eb5ea8336e912ad1ca4815650e0281afe2034 10.49MB / 29.84MB 4.2s
+#5 sha256:f2be67225471500c788ce88c597eb5ea8336e912ad1ca4815650e0281afe2034 12.58MB / 29.84MB 4.5s
+#5 sha256:f2be67225471500c788ce88c597eb5ea8336e912ad1ca4815650e0281afe2034 14.68MB / 29.84MB 5.0s
+#5 sha256:f2be67225471500c788ce88c597eb5ea8336e912ad1ca4815650e0281afe2034 16.78MB / 29.84MB 5.4s
+#5 sha256:f2be67225471500c788ce88c597eb5ea8336e912ad1ca4815650e0281afe2034 18.87MB / 29.84MB 5.7s
+#5 sha256:f2be67225471500c788ce88c597eb5ea8336e912ad1ca4815650e0281afe2034 20.97MB / 29.84MB 6.2s
+#5 sha256:f2be67225471500c788ce88c597eb5ea8336e912ad1ca4815650e0281afe2034 23.07MB / 29.84MB 6.5s
+#5 sha256:f2be67225471500c788ce88c597eb5ea8336e912ad1ca4815650e0281afe2034 25.17MB / 29.84MB 6.9s
+#5 sha256:f2be67225471500c788ce88c597eb5ea8336e912ad1ca4815650e0281afe2034 27.26MB / 29.84MB 7.2s
+#5 sha256:f2be67225471500c788ce88c597eb5ea8336e912ad1ca4815650e0281afe2034 29.84MB / 29.84MB 7.7s
+#5 sha256:f2be67225471500c788ce88c597eb5ea8336e912ad1ca4815650e0281afe2034 29.84MB / 29.84MB 7.8s done
+#5 extracting sha256:f2be67225471500c788ce88c597eb5ea8336e912ad1ca4815650e0281afe2034
+#5 extracting sha256:f2be67225471500c788ce88c597eb5ea8336e912ad1ca4815650e0281afe2034 1.7s done
+#5 DONE 10.0s
+
+#5 [builder 1/4] FROM docker.io/library/python:3.12-slim@sha256:cb33f7f771ecec2ef1225cf39b159591a040391bd73e4c01f00fdfc4c47611d2
+#5 extracting sha256:be6443c06d3c9914acdca3ffb368adad23d4f282b55e71e730878ad3e3c3f75c
+#5 extracting sha256:be6443c06d3c9914acdca3ffb368adad23d4f282b55e71e730878ad3e3c3f75c 0.2s done
+#5 DONE 10.2s
+
+#5 [builder 1/4] FROM docker.io/library/python:3.12-slim@sha256:cb33f7f771ecec2ef1225cf39b159591a040391bd73e4c01f00fdfc4c47611d2
+#5 extracting sha256:b524bb3aba7394d85233f3a0a742b8f1b56179e8f61492f73d42a1ff118623b7
+#5 extracting sha256:b524bb3aba7394d85233f3a0a742b8f1b56179e8f61492f73d42a1ff118623b7 0.9s done
+#5 DONE 11.1s
+
+#5 [builder 1/4] FROM docker.io/library/python:3.12-slim@sha256:cb33f7f771ecec2ef1225cf39b159591a040391bd73e4c01f00fdfc4c47611d2
+#5 extracting sha256:5c397e4307db7bd392eff1d36de88b04da2a137a4b906b7e0e4657bada560645 0.1s done
+#5 DONE 11.1s
+
+#6 [builder 2/4] RUN python -m venv /opt/venv
+#6 ...
+
+#7 [stage-1 2/5] RUN useradd -r -u 10001 app && mkdir /models && chown app /models
+#7 0.408 useradd warning: app's uid 10001 is greater than SYS_UID_MAX 999
+#7 DONE 0.6s
+
+#6 [builder 2/4] RUN python -m venv /opt/venv
+#6 DONE 6.0s
+
+#8 [builder 3/4] COPY requirements-train.txt .
+#8 DONE 0.2s
+
+#9 [builder 4/4] RUN pip install -r requirements-train.txt
+#9 1.236 Collecting scikit-learn (from -r requirements-train.txt (line 1))
+#9 1.329   Downloading scikit_learn-1.9.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.3 kB)
+#9 1.372 Collecting joblib (from -r requirements-train.txt (line 2))
+#9 1.394   Downloading joblib-1.6.0-py3-none-any.whl.metadata (6.5 kB)
+#9 1.832 Collecting numpy (from -r requirements-train.txt (line 3))
+#9 1.853   Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+#9 2.119 Collecting scipy>=1.10.0 (from scikit-learn->-r requirements-train.txt (line 1))
+#9 2.144   Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#9 2.283 Collecting narwhals>=2.0.1 (from scikit-learn->-r requirements-train.txt (line 1))
+#9 2.307   Downloading narwhals-2.27.1-py3-none-any.whl.metadata (15 kB)
+#9 2.340 Collecting threadpoolctl>=3.5.0 (from scikit-learn->-r requirements-train.txt (line 1))
+#9 2.361   Downloading threadpoolctl-3.7.0-py3-none-any.whl.metadata (24 kB)
+#9 2.575 Collecting cloudpickle>=3.0 (from joblib->-r requirements-train.txt (line 2))
+#9 2.596   Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+#9 2.643 Downloading scikit_learn-1.9.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (9.2 MB)
+#9 5.419    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.2/9.2 MB 3.3 MB/s eta 0:00:00
+#9 5.441 Downloading joblib-1.6.0-py3-none-any.whl (306 kB)
+#9 5.558 Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+#9 11.45    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 2.8 MB/s eta 0:00:00
+#9 11.47 Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+#9 11.50 Downloading narwhals-2.27.1-py3-none-any.whl (483 kB)
+#9 11.77 Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+#9 22.61    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 3.3 MB/s eta 0:00:00
+#9 22.63 Downloading threadpoolctl-3.7.0-py3-none-any.whl (26 kB)
+#9 23.39 Installing collected packages: threadpoolctl, numpy, narwhals, cloudpickle, scipy, joblib, scikit-learn
+#9 41.12 Successfully installed cloudpickle-3.1.2 joblib-1.6.0 narwhals-2.27.1 numpy-2.5.4 scikit-learn-1.9.1 scipy-1.18.1 threadpoolctl-3.7.0
+#9 DONE 41.6s
+
+#10 [stage-1 3/5] COPY --from=builder /opt/venv /opt/venv
+#10 DONE 1.7s
+
+#11 [stage-1 4/5] WORKDIR /app
+#11 DONE 0.3s
+
+#12 [stage-1 5/5] COPY train.py .
+#12 DONE 0.3s
+
+#13 exporting to image
+#13 exporting layers
+#13 exporting layers 19.9s done
+#13 exporting manifest sha256:9719b060ec04a23eb67489eedce0d53d953f46804b939c339eeab7f8bc278831 0.0s done
+#13 exporting config sha256:da2084e6ae0137707d5147d8e7b0d359bd74b70f924c4d410df7bcbf55486b12 0.0s done
+#13 exporting attestation manifest sha256:a0f272d4f580b7552be60b8a672bda8de460a6c3b4f999a488860fa6f44a2296
+#13 exporting attestation manifest sha256:a0f272d4f580b7552be60b8a672bda8de460a6c3b4f999a488860fa6f44a2296 0.1s done
+#13 exporting manifest list sha256:3562bb8094b0831da87ba24a03cff775dd4bdfdfad89ad1de52547ad537754ca 0.0s done
+#13 naming to docker.io/library/iris-train:opt 0.0s done
+#13 unpacking to docker.io/library/iris-train:opt
+#13 unpacking to docker.io/library/iris-train:opt 8.5s done
+#13 DONE 28.7s

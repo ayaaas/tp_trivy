@@ -1,0 +1,124 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.infer
+#1 transferring dockerfile: 752B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.5s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 181B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 187B done
+#4 DONE 0.1s
+
+#5 [builder 1/4] FROM docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+#5 resolve docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1
+#5 resolve docker.io/library/python:3.12-slim@sha256:a6e34c598f2467ed0e9a8d349809fcd8b5c603269512df273a0bb1784edc11b1 0.1s done
+#5 CACHED
+
+#6 [stage-1 2/5] RUN useradd -r -u 10001 app
+#6 0.480 useradd warning: app's uid 10001 is greater than SYS_UID_MAX 999
+#6 DONE 0.6s
+
+#7 [builder 2/4] RUN python -m venv /opt/venv
+#7 DONE 3.8s
+
+#8 [builder 3/4] COPY requirements-infer.txt .
+#8 DONE 0.3s
+
+#9 [builder 4/4] RUN pip install -r requirements-infer.txt
+#9 1.694 Collecting fastapi (from -r requirements-infer.txt (line 1))
+#9 1.976   Downloading fastapi-0.143.3-py3-none-any.whl.metadata (26 kB)
+#9 2.098 Collecting uvicorn (from -r requirements-infer.txt (line 2))
+#9 2.117   Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+#9 2.392 Collecting scikit-learn (from -r requirements-infer.txt (line 3))
+#9 2.411   Downloading scikit_learn-1.9.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.3 kB)
+#9 2.479 Collecting joblib (from -r requirements-infer.txt (line 4))
+#9 2.526   Downloading joblib-1.6.0-py3-none-any.whl.metadata (6.5 kB)
+#9 3.222 Collecting numpy (from -r requirements-infer.txt (line 5))
+#9 3.239   Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+#9 3.301 Collecting starlette>=0.46.0 (from fastapi->-r requirements-infer.txt (line 1))
+#9 3.318   Downloading starlette-1.8.0-py3-none-any.whl.metadata (6.6 kB)
+#9 3.577 Collecting pydantic>=2.9.0 (from fastapi->-r requirements-infer.txt (line 1))
+#9 3.593   Downloading pydantic-2.14.1-py3-none-any.whl.metadata (133 kB)
+#9 3.824 Collecting typing-extensions>=4.8.0 (from fastapi->-r requirements-infer.txt (line 1))
+#9 3.846   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+#9 3.913 Collecting typing-inspection>=0.4.2 (from fastapi->-r requirements-infer.txt (line 1))
+#9 3.933   Downloading typing_inspection-0.4.4-py3-none-any.whl.metadata (2.6 kB)
+#9 3.963 Collecting annotated-doc>=0.0.2 (from fastapi->-r requirements-infer.txt (line 1))
+#9 3.987   Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+#9 4.056 Collecting opentelemetry-api>=1.44.0 (from fastapi->-r requirements-infer.txt (line 1))
+#9 4.075   Downloading opentelemetry_api-1.45.1-py3-none-any.whl.metadata (1.4 kB)
+#9 4.115 Collecting click>=7.0 (from uvicorn->-r requirements-infer.txt (line 2))
+#9 4.147   Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+#9 4.225 Collecting h11>=0.8 (from uvicorn->-r requirements-infer.txt (line 2))
+#9 4.310   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#9 4.658 Collecting scipy>=1.10.0 (from scikit-learn->-r requirements-infer.txt (line 3))
+#9 4.675   Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#9 4.833 Collecting narwhals>=2.0.1 (from scikit-learn->-r requirements-infer.txt (line 3))
+#9 4.851   Downloading narwhals-2.27.1-py3-none-any.whl.metadata (15 kB)
+#9 4.882 Collecting threadpoolctl>=3.5.0 (from scikit-learn->-r requirements-infer.txt (line 3))
+#9 4.913   Downloading threadpoolctl-3.7.0-py3-none-any.whl.metadata (24 kB)
+#9 4.951 Collecting cloudpickle>=3.0 (from joblib->-r requirements-infer.txt (line 4))
+#9 4.969   Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+#9 5.000 Collecting annotated-types>=0.6.0 (from pydantic>=2.9.0->fastapi->-r requirements-infer.txt (line 1))
+#9 5.018   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+#9 6.413 Collecting pydantic-core==2.50.1 (from pydantic>=2.9.0->fastapi->-r requirements-infer.txt (line 1))
+#9 6.434   Downloading pydantic_core-2.50.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.5 kB)
+#9 6.487 Collecting anyio<5,>=4.0.0 (from starlette>=0.46.0->fastapi->-r requirements-infer.txt (line 1))
+#9 6.516   Downloading anyio-4.15.1-py3-none-any.whl.metadata (4.7 kB)
+#9 6.552 Collecting idna>=2.8 (from anyio<5,>=4.0.0->starlette>=0.46.0->fastapi->-r requirements-infer.txt (line 1))
+#9 6.567   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+#9 6.591 Downloading fastapi-0.143.3-py3-none-any.whl (144 kB)
+#9 6.762 Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+#9 6.825 Downloading scikit_learn-1.9.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (9.2 MB)
+#9 13.36    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.2/9.2 MB 1.4 MB/s eta 0:00:00
+#9 13.39 Downloading joblib-1.6.0-py3-none-any.whl (306 kB)
+#9 13.48 Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+#9 29.63    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 1.0 MB/s eta 0:00:00
+#9 29.73 Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+#9 29.79 Downloading click-8.5.0-py3-none-any.whl (125 kB)
+#9 30.29 Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+#9 30.64 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#9 30.76 Downloading narwhals-2.27.1-py3-none-any.whl (483 kB)
+#9 32.24 Downloading opentelemetry_api-1.45.1-py3-none-any.whl (60 kB)
+#9 32.55 Downloading pydantic-2.14.1-py3-none-any.whl (488 kB)
+#9 33.64 Downloading pydantic_core-2.50.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.2 MB)
+#9 35.95    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 895.5 kB/s eta 0:00:00
+#9 35.97 Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+#9 87.60    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 839.9 kB/s eta 0:00:00
+#9 87.66 Downloading starlette-1.8.0-py3-none-any.whl (79 kB)
+#9 87.75 Downloading threadpoolctl-3.7.0-py3-none-any.whl (26 kB)
+#9 87.79 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+#9 87.84 Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+#9 87.87 Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+#9 87.92 Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+#9 88.14 Downloading idna-3.20-py3-none-any.whl (69 kB)
+#9 88.58 Installing collected packages: typing-extensions, threadpoolctl, numpy, narwhals, idna, h11, cloudpickle, click, annotated-types, annotated-doc, uvicorn, typing-inspection, scipy, pydantic-core, opentelemetry-api, joblib, anyio, starlette, scikit-learn, pydantic, fastapi
+#9 101.2 Successfully installed annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.15.1 click-8.5.0 cloudpickle-3.1.2 fastapi-0.143.3 h11-0.16.0 idna-3.20 joblib-1.6.0 narwhals-2.27.1 numpy-2.5.4 opentelemetry-api-1.45.1 pydantic-2.14.1 pydantic-core-2.50.1 scikit-learn-1.9.1 scipy-1.18.1 starlette-1.8.0 threadpoolctl-3.7.0 typing-extensions-4.16.0 typing-inspection-0.4.4 uvicorn-0.54.0
+#9 DONE 102.1s
+
+#10 [stage-1 3/5] COPY --from=builder /opt/venv /opt/venv
+#10 DONE 1.5s
+
+#11 [stage-1 4/5] WORKDIR /app
+#11 DONE 0.3s
+
+#12 [stage-1 5/5] COPY app.py .
+#12 DONE 0.2s
+
+#13 exporting to image
+#13 exporting layers
+#13 exporting layers 14.4s done
+#13 exporting manifest sha256:3040a07df215f250d0f50be7c18419892fdacad8752c3bc8e2b2cdf3ed6614bf 0.0s done
+#13 exporting config sha256:b3eb46e4cebe4b0d1cb2a423fb0bb802a2bae9d9f5f892adc9b7c1a1bf72578f 0.1s done
+#13 exporting attestation manifest sha256:c320f5dc1d2e3527623ff64c824561e84fc9301e4487b2e68cc27178bcd9d5b6 0.1s done
+#13 exporting manifest list sha256:2264174486e5c6b0b11d57db5f81a87e0a1e2dbb4965de1b3831a864352333e2 0.0s done
+#13 naming to docker.io/library/iris-infer:bench 0.0s done
+#13 unpacking to docker.io/library/iris-infer:bench
+#13 unpacking to docker.io/library/iris-infer:bench 4.4s done
+#13 DONE 19.2s

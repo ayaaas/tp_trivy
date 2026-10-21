@@ -1,0 +1,55 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.train.opt
+#1 transferring dockerfile: 685B done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.5s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 181B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 880B done
+#4 DONE 0.1s
+
+#5 [builder 1/4] FROM docker.io/library/python:3.12-slim@sha256:cb33f7f771ecec2ef1225cf39b159591a040391bd73e4c01f00fdfc4c47611d2
+#5 resolve docker.io/library/python:3.12-slim@sha256:cb33f7f771ecec2ef1225cf39b159591a040391bd73e4c01f00fdfc4c47611d2
+#5 resolve docker.io/library/python:3.12-slim@sha256:cb33f7f771ecec2ef1225cf39b159591a040391bd73e4c01f00fdfc4c47611d2 0.1s done
+#5 DONE 0.1s
+
+#6 [builder 2/4] RUN python -m venv /opt/venv
+#6 CACHED
+
+#7 [builder 3/4] COPY requirements-train.txt .
+#7 CACHED
+
+#8 [builder 4/4] RUN pip install -r requirements-train.txt
+#8 CACHED
+
+#9 [stage-1 3/5] COPY --from=builder /opt/venv /opt/venv
+#9 CACHED
+
+#10 [stage-1 2/5] RUN useradd -r -u 10001 app && mkdir /models && chown app /models
+#10 CACHED
+
+#11 [stage-1 4/5] WORKDIR /app
+#11 CACHED
+
+#12 [stage-1 5/5] COPY train.py .
+#12 DONE 0.4s
+
+#13 exporting to image
+#13 exporting layers
+#13 exporting layers 0.3s done
+#13 exporting manifest sha256:f169633017e724a959768f60539efc3173a646fcab157891ddcd24bd2d0c39f5 0.0s done
+#13 exporting config sha256:6c692c9feb2d7354876642ae90160ef600084ab5460efe1a5219bde45167af0b 0.0s done
+#13 exporting attestation manifest sha256:5f749ab46d19e6d306adfd3294688981c460ebbc2710ba4ea4570e7ff67e011d
+#13 exporting attestation manifest sha256:5f749ab46d19e6d306adfd3294688981c460ebbc2710ba4ea4570e7ff67e011d 0.1s done
+#13 exporting manifest list sha256:545d09f9f7b773f1a0e0bb41cce502e664005434092d5375bce7734d1c7d7546 0.0s done
+#13 naming to docker.io/library/iris-train:opt
+#13 naming to docker.io/library/iris-train:opt 0.0s done
+#13 unpacking to docker.io/library/iris-train:opt 0.1s done
+#13 DONE 0.6s
