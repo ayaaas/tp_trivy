@@ -1,0 +1,22 @@
+services:
+  train:
+    build:
+      context: .
+      dockerfile: Dockerfile.train.opt
+    image: iris-train:opt
+    volumes:
+      - models:/models
+
+  infer:
+    build:
+      context: .
+      dockerfile: Dockerfile.infer.opt
+    image: iris-infer:opt
+    volumes:
+      - models:/models:ro
+    depends_on:
+      train:
+        condition: service_completed_successfully
+
+volumes:
+  models:

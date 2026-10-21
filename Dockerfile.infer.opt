@@ -1,0 +1,17 @@
+# Stage 1: build dependencies
+FROM python:3.11-slim-trixie AS builder
+WORKDIR /build
+RUN python -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
+COPY requirements.txt .
+RUN pip install --no-cache-dir --upgrade pip && pip install --no-cache-dir -r requirements.txt
+
+# Stage 2: minimal runtime
+FROM python:3.11-slim-trixie
+WORKDIR /app
+COPY --from=builder /opt/venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH" PYTHONUNBUFFERED=1
+RUN useradd -m appuser && mkdir /models && chown appuser /models
+COPY infer.py .
+USER appuser
+CMD ["python", "infer.py"]
